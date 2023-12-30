@@ -3,6 +3,7 @@ This is the c configuration file for the keymap
 
 Copyright 2012 Jun Wako <wakojun@gmail.com>
 Copyright 2015 Jack Humbert
+Modified  2023 Vladesc
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -32,12 +33,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define TAPPING_TERM 100
 
 //ifdef RGBLIGHT_ENABLE
+    //## <BEGIN> - disable to lower firmware size
+    //#define RGBLIGHT_EFFECT_SNAKE
+    //#define RGBLIGHT_EFFECT_CHRISTMAS
+    //## <END> - disable to lower firmware size
     #define RGBLIGHT_EFFECT_BREATHING
     #define RGBLIGHT_EFFECT_RAINBOW_MOOD
     #define RGBLIGHT_EFFECT_RAINBOW_SWIRL
-    #define RGBLIGHT_EFFECT_SNAKE
     #define RGBLIGHT_EFFECT_KNIGHT
-    #define RGBLIGHT_EFFECT_CHRISTMAS
     #define RGBLIGHT_EFFECT_STATIC_GRADIENT
     #define RGBLIGHT_EFFECT_RGB_TEST
     #define RGBLIGHT_EFFECT_ALTERNATING
@@ -47,3 +50,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     #define RGBLIGHT_SAT_STEP 17
     #define RGBLIGHT_VAL_STEP 17
 //endif
+
+//## OLED Configuration -- src: https://github.com/filterpaper/qmk_userspace/tree/main/oled
+#define SPLIT_MODS_ENABLE
+#define SPLIT_LED_STATE_ENABLE
+#define SPLIT_LAYER_STATE_ENABLE
+#define OLED_FONT_H "oled/oledfont.c"
