@@ -1,3 +1,6 @@
+# Bootloader for the elite-c
+BOOTLOADER = atmel-dfu
+
 ## Disable Backlight
 BACKLIGHT_ENABLE = no
 
